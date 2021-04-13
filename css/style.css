@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
 	padding: 0px;
 	margin: 0px;
@@ -102,14 +103,21 @@ body.lock {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
-
 .container {
-	max-width: 1170px;
+	max-width: 1100px;
 	margin: 0 auto;
 	width: 100%;
 }
-@media (max-width: 1182px) {
+@media (max-width: 1112px) {
 	.container {
 		max-width: 970px;
 	}
@@ -770,70 +778,16 @@ body.ie .ibg img {
 	top: 18px !important;
 }
 
-.popup {
-	-webkit-overflow-scrolling: touch;
-	background-color: rgba(0, 0, 0, 0.8);
-	display: none;
-	position: fixed !important;
-	top: 0px;
-	left: 0;
+.mainblock {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	position: relative;
+}
+.mainblock__image {
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
-	z-index: 100;
-}
-.popup.active .popup-content {
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-.popup.show {
-	display: block;
-}
-.popup.show .popup-content {
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.popup-table {
-	height: 100%;
-	table-layout: fixed;
-}
-.popup-table > .cell {
-	height: 100%;
-	vertical-align: middle;
-	padding: 30px 10px;
-}
-
-.popup-content {
-	-ms-transform: scale(0);
-	-webkit-transform: scale(0);
-	transform: scale(0);
-	-webkit-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-	position: relative;
-	max-width: 600px;
-	margin: 0px auto;
-	background-color: #fff;
-	color: black;
-}
-
-.popup-close {
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	cursor: pointer;
-	background: url("../img/icons/close.png") 0 0 no-repeat;
-}
-
-.popup-video .popup-close {
-	width: 40px;
-	height: 40px;
-	background-color: #000;
 	top: 0;
-	right: 0;
+	left: 0;
 }
