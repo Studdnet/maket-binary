@@ -846,14 +846,24 @@ body.ie .ibg img {
 	margin: 0px 0px 0px -52.5px;
 	bottom: 0;
 }
+@media (max-width: 767.98px) {
+	.mainblock__text {
+		padding: 0px 0px 25px 0px;
+	}
+}
 .mainblock__title {
-	font-family: Lato;
 	font-size: 34px;
 	line-height: 40px;
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 5.43px;
 	margin: 0px 0px 10px 0px;
+}
+@media (max-width: 767.98px) {
+	.mainblock__title {
+		font-size: 25px;
+		line-height: 30px;
+	}
 }
 .mainblock__subtitle {
 	font-size: 26px;
