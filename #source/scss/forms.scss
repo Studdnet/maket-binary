@@ -9,7 +9,18 @@
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn{
 	display: inline-block;
-	padding: 0px 0px;
+	height: 47px;
+	padding: 0px 42px;
+	line-height: 44px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.67px;
+	color: #ffffff;
+	&_w {
+		border: 1px solid #fff;
+		color: #fff;
+	}
 	&:hover{}
 	&.fw{width: 100%;}
 }

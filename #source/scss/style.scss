@@ -87,26 +87,69 @@ body {
 
 	flex: 1 1 auto;
 	position: relative;
+	@include flexbox();
+	justify-content: center;
+	// align-items: center;
+	text-align: center;
+	padding: 40px 0;
 
 	&__content {
+		position: relative;
+		z-index: 1;
+		flex: 1 1 auto;
+		.container {
+			height: 100%;
+			@include flexbox();
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__logo {
+		margin: 0px 0px 1% 0px;
 	}
 
 	&__text {
+		color: #ffffff;
+		position: relative;
+		padding: 0px 0px 45px 0px;
+		&:after {
+			content: "";
+			width: 105px;
+			height: 2px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 50%;
+			margin: 0px 0px 0px -52.5px;
+			bottom: 0;
+		}
 	}
 
 	&__title {
+		font-family: Lato;
+		font-size: 34px;
+		line-height: 40px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 5.43px;
+		margin: 0px 0px 10px 0px;
 	}
 
 	&__subtitle {
+		font-size: 26px;
+		font-weight: 400;
+		text-transform: none;
+		letter-spacing: 4.15px;
 	}
 
 	&__footer {
+		@include flexboxinline();
+		flex-direction: column;
 	}
 
 	&__btn {
+		margin: 10% 0px 10% 0px;
 	}
 
 	&__arrow {
@@ -121,9 +164,6 @@ body {
 	}
 }
 .btn {
-
-	&_w {
-	}
 }
 
 //</ОСНОВНОЙ БЛОК>=======================================================================================================
