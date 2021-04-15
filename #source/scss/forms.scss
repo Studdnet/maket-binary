@@ -17,11 +17,38 @@
 	font-weight: 400;
 	letter-spacing: 0.67px;
 	color: #ffffff;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@include scale(0);
+		@include anim(0.3s, 0s);
+	}
 	&_w {
 		border: 1px solid #fff;
 		color: #fff;
+		&:after {
+			background-color: #fff;
+		}
 	}
-	&:hover{}
+	
+	span {
+		@include anim(0.3s, 0s);
+		position: relative;
+		z-index: 1;
+	}
+	&:hover{
+		&.btn_w {
+			color: #000;
+		}
+		&:after {
+			@include scale(1);
+		}
+	}
 	&.fw{width: 100%;}
 }
 //</BUTTONS>====================================================================================================

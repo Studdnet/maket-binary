@@ -135,7 +135,7 @@ body {
 		text-transform: uppercase;
 		letter-spacing: 5.43px;
 		margin: 0px 0px 10px 0px;
-		@media (max-width:$md3+px){
+		@media screen and (max-width: $md3+px), screen and (max-height: 600px) {
 			font-size: 25px;
 			line-height: 30px;
 		}
@@ -156,6 +156,10 @@ body {
 	&__btn {
 		margin: 10% 0px 10% 0px;
 	}
+	&__arrow {
+		position: relative;
+		animation: arrow 1.5s infinite ease;
+	}
 
 	&__image {
 		position: absolute;
@@ -165,5 +169,30 @@ body {
 		left: 0;
 	}
 }
+
+@keyframes arrow {
+	0%{top: 0;}
+	50%{top: 20px;}
+	100%{top: 0;}
+}
+
+@-webkit-keyframes arrow {
+	0%{top: 0;}
+	50%{top: 20px;}
+	100%{top: 0;}
+}
+
+@-moz-keyframes arrow {
+	0%{top: 0;}
+	50%{top: 20px;}
+	100%{top: 0;}
+}
+
+@-o-keyframes arrow {
+	0%{top: 0;}
+	50%{top: 20px;}
+	100%{top: 0;}
+}
+
 
 //</ОСНОВНОЙ БЛОК>=======================================================================================================
