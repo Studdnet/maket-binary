@@ -954,3 +954,37 @@ body.ie .ibg img {
 		top: 0;
 	}
 }
+.menu {
+	padding: 22px 0;
+}
+.menu__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.menu__list li {
+	margin: 0px 25px;
+}
+.menu__link {
+	text-transform: uppercase;
+	font-size: 15px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #3c3c3c;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.menu__link:hover {
+	color: #ada074;
+}
+.menu__link_act {
+	color: #ada074;
+}
