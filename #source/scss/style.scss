@@ -35,6 +35,7 @@ $md4: 479.98;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================================
 @import "null.scss";
 body {
+	font-family: lato;
 	color: black;
 	font-size: 18px;
 	&.lock {
@@ -206,8 +207,18 @@ body {
 //======================================================================================================================
 .menu {
 	padding: 22px 0;
+	border-bottom: 1px solid #f2f2f2;
+	&_mb {
+		margin: 0px 0px 130px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+	}
 	@media (max-width: $md4+px) {
 		padding: 15px 0 12px 0;
+	}
+	@media (max-width: $md3+px) {
+		margin: 0px 0px 30px 0px;
 	}
 	&__items {
 	}
@@ -244,29 +255,86 @@ body {
 }
 //======================================================================================================================
 .about {
-
+	padding: 0px 0px 60px 0px;
+	@media (max-width: $md3+px) {
+		padding: 0px 0px 10px 0px;
+	}
 	&__header-block {
+		margin: 0px 0px 65px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
 	}
 
 	&__body {
+		text-align: center;
+		max-width: 900px;
+		margin: 0 auto;
 	}
 
 	&__row {
-	}
+		@include flexbox();
+		margin: 0px -15px;
+		@media (max-width: $md3+px) {
+			display: block;
+			}
+		}
+
 
 	&__column {
+		margin: 0px 0px 30px 0px;
+		flex: 0 1 33.3333%;
+		padding: 0 15px;
+		
 	}
 
 	&__item {
+		text-align: center;
+		max-width: 260px; 
+		@media (max-width: $md3+px) {
+			max-width: none;
+		}
 	}
 
 	&__icon {
+		width: 92px;
+		height: 92px;
+		border-radius: 50%;
+		border: 1px solid #f2f2f2; 
+		@include flexboxinline();
+		justify-content: center;
+		align-items: center;
+		margin: 0px 0px 40px 0px;
+		&_l {
+			img {
+				position: relative;
+				left: 5px;
+			}
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	&__title {
+		font-size: 22px;
+		letter-spacing: 3.52px;
+		color: #000000;
+		margin: 0px 0px 35px 0px;
+		@media (max-width: $md2+px) {
+			font-size: 18px;
+			margin: 0px 0px 25px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	&__text {
+		font-size: 14px;
+		line-height: 26px;
+		font-weight: 300;
+		color: #868585;
 	}
 }
 //======================================================================================================================
