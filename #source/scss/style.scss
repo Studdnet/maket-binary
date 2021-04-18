@@ -79,6 +79,7 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>========================================================================
+@import "baguetteBox.scss";
 @import "footer.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>=======================================================================
 
@@ -215,7 +216,7 @@ body {
 		}
 	}
 	@media (max-width: $md4+px) {
-		padding: 15px 0 12px 0;
+		padding: 15px 0 5px 0;
 	}
 	@media (max-width: $md3+px) {
 		margin: 0px 0px 30px 0px;
@@ -338,4 +339,294 @@ body {
 	}
 }
 //======================================================================================================================
+
+.portfolio {
+	background-color: #f3f3f3;
+	padding: 105px 0px 50px 0px;
+	@media (max-width: $md2+px){
+		padding: 40px 0px 40px 0px;
+	}
+
+	&__header-block {
+		margin: 0px 0px 50px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__filter {
+		margin: 0px 0px 136px 0px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 60px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		@include flexbox();
+		margin: 0 -15px;
+		flex-wrap: wrap;
+		@media (max-width: $md3+px){
+			margin: 0 -10px;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		max-width: 50%;
+		padding: 0 15px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md3+px){
+			padding: 0 10px;
+			flex: 1 1 100%;
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: $md4+px){
+			max-width: none;
+		}
+	}
+
+	&__item {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__footer {
+		padding: 35px 0px 0px 0px;
+		text-align: center;
+		@media (max-width: $md3+px){
+			padding: 15px 0px 0px 0px;
+		}
+	}
+
+	&__btn {
+	}
+}
+
+.filter {
+
+	&__list {
+		@include flexbox();
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		font-size: 15px;
+		text-transform: uppercase;
+		line-height: 1.2;
+		font-weight: 700;
+		margin: 0 25px;
+		color: #3c3c3c;
+		cursor: pointer;
+		@include anim(0.3s, 0s);
+		&.active {
+			color: #ada074;
+		}
+		&:hover {
+			color: #ada074;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0 15px;
+		}
+	}
+}
+
+.partners {
+	background: url('..//..//img/bg_2.png') center / cover no-repeat;
+	padding: 80px 0px 70px 0px;
+	@media (max-width: $md3+px) {
+		padding: 30px 0px 10px 0px;
+	}
+	&__title {
+		text-align: center;
+		font-size: 30.4px;
+		line-height: 1.2;
+		font-weight: 300;
+		letter-spacing: 0.06em;
+		color: #ffffff;
+		margin: 0px 0px 93px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		flex-wrap: wrap;
+		@include flexbox ();
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__column {
+		padding: 0 50px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md3+px) {
+			padding: 0 30px;
+		}
+	}
+
+	&__item {
+	}
+}
+
+//======================================================================================================================
+.contacts {
+	padding: 80px 0px 80px 0px;
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
+	}
+	&__header-block {
+		margin: 0px 0px 120px 0px;
+		@media (max-width: $md3+px){
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	&__body {
+		@include flexbox();
+		margin: 0 -25px;
+		@media (max-width: $md3+px) {
+			display: block;
+			margin: 0 -10px;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 25px;
+		@media (max-width: $md3+px) {
+			padding: 0 10px;
+		}
+	}
+
+	&__form {
+		text-align: right;
+		@media (max-width: $md3+px) {
+			text-align: left;
+		}
+	}
+
+	&__content {
+		max-width: 260px;
+		@media (max-width: $md3+px) {
+			max-width: none;
+			display: block;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 26px;
+		font-weight: 300;
+		color: #000000;
+		margin: 0px 0px 35px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__name {
+		font-size: 14px;
+		font-weight: 700;
+		margin: 0px 0px 25px 0px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__social {
+	}
+
+	&__email {
+		font-size: 14px;
+		a {
+			font-weight: 700;
+			color: #000;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.form-contacts {
+
+	&__row {
+		@include flexbox();
+		margin: 0 -15px 70px -15px;
+		@media (max-width: $md3+px) {
+			margin: 0 -10px 30px -10px;
+		}
+		@media (max-width: $md4+px) {
+			display: block;
+		}
+	}
+
+	&__body {
+		display: inline-block;
+		width: 100%;
+		max-width: 385px;
+		@media (max-width: $md3+px) {
+			max-width: none;
+			display: block;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 15px;
+		@media (max-width: $md3+px) {
+			padding: 0 -10px 30px -10px;
+		}
+		@media (max-width: $md4+px) {
+			&:first-child{
+				margin: 0px 0px 30px 0px;
+			}
+		}
+	}
+
+	&__input {
+	}
+
+	&__label {
+		text-align: left;
+		font-size: 14px;
+		line-height: 1.2;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: #000000;
+		margin: 0px 0px 10px 0px;
+	}
+	&__btn {
+		margin: 35px 0px 0px 0px;
+		@media (max-width: $md3+px) {
+			display: block;
+			width: 100%;
+			margin: 25px 0px 30px 0px;
+		}
+	}
+}
+.input {
+}
+.social {
+	margin: 0px 0px 15px 0px;
+	@include flexbox();
+	&__item {
+		margin: 0px 15px 0px 0px;
+	}
+}
+
+//======================================================================================================================
+
+
+
 

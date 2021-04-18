@@ -13,6 +13,7 @@
 	padding: 0px 42px;
 	line-height: 44px;
 	text-transform: uppercase;
+	background-color: transparent;
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.67px;
@@ -35,6 +36,14 @@
 			background-color: #fff;
 		}
 	}
+
+	&_b {
+		border: 1px solid #000;
+		color: #000;
+		&:after {
+			background-color: #000;
+		}
+	}
 	
 	span {
 		@include anim(0.3s, 0s);
@@ -44,6 +53,9 @@
 	&:hover{
 		&.btn_w {
 			color: #000;
+		}
+		&.btn_b {
+			color: #fff;
 		}
 		&:after {
 			@include scale(1);
@@ -95,16 +107,30 @@
 //<INPUT (inp+tab)>====================================================================================================
 input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .input{
+	position: relative;
+	height: 50px;
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
+	font-size: 15px;
 	padding: 0px 20px;
-	&.focus{}
-	&.err{}
+	border-top: 1px solid #000;
+	@media (max-width: $md3+px) {
+		padding: 0 10px;
+	}
+	
+	&.focus{
+		border: 1px solid rgb(19, 226, 19);
+	}
+	&.err{
+		border: 1px solid red;
+	}
+	background-color: #f8f7f7; 
 }
 textarea.input{
 	resize:none;
-	padding: 0px 0px;
+	height: 117px;
+	padding: 10px 20px;
 }
 //</INPUT>====================================================================================================
 
