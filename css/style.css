@@ -245,7 +245,7 @@ body.lock {
 	right: 0px;
 	width: 45px;
 	height: 100%;
-	background: url("../img/icons/select-arrow.svg") center no-repeat;
+	background: url("./img/icons/select-arrow.svg") center no-repeat;
 }
 .select .select-title__value {
 	color: #000;
@@ -345,7 +345,7 @@ textarea.input {
 	position: absolute;
 }
 .check.active:before {
-	background: url("../img/icons/check.png") center no-repeat;
+	background: url("./img/icons/check.png") center no-repeat;
 }
 
 .option {
@@ -374,7 +374,7 @@ textarea.input {
 	border-radius: 50%;
 }
 .option.active:before {
-	background: url("../img/icons/option.png") center no-repeat;
+	background: url("./img/icons/option.png") center no-repeat;
 }
 
 .rating-block {
@@ -404,7 +404,7 @@ textarea.input {
 	height: 14px;
 	top: 0;
 	left: 0;
-	background: url("../img/icons/bg_rating.svg") 0 0 no-repeat;
+	background: url("./img/icons/bg_rating.svg") 0 0 no-repeat;
 	z-index: 1;
 	background-size: 85px 100%;
 }
@@ -415,7 +415,7 @@ textarea.input {
 	height: 14px;
 	top: 0;
 	left: 0;
-	background: url("../img/icons/bg_rating_active.svg") 0 0 no-repeat;
+	background: url("./img/icons/bg_rating_active.svg") 0 0 no-repeat;
 	z-index: 2;
 	background-size: 85px 100%;
 }
@@ -561,7 +561,7 @@ textarea.input {
 	border-radius: 0 0 4px 4px;
 }
 .form-range-line .ui-slider-handle {
-	background: url("../img/icons/range.svg") 0 0 no-repeat;
+	background: url("./img/icons/range.svg") 0 0 no-repeat;
 	width: 28px;
 	height: 28px;
 	position: absolute;
@@ -571,7 +571,7 @@ textarea.input {
 	cursor: pointer;
 }
 .form-range-line .ui-state-hover {
-	background: url("../img/icons/range_a.svg") 0 0 no-repeat;
+	background: url("./img/icons/range_a.svg") 0 0 no-repeat;
 }
 
 .form-range-values {
@@ -1599,7 +1599,7 @@ body.ie .ibg img {
 }
 
 .partners {
-	background: url("..//..//img/bg_2.png") center/cover no-repeat;
+	background: url("./img/bg_2.png") center/cover no-repeat;
 	padding: 80px 0px 70px 0px;
 }
 @media (max-width: 767.98px) {
